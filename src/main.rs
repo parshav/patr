@@ -1,8 +1,10 @@
 extern crate chrono;
 
-use std::io::{stdin, Read};
+use std::io::stdin;
 use std::env;
 use std::fs;
+use std::process::Command;
+use std::path::Path;
 
 fn main() {
     let mut title = String::new();
@@ -30,4 +32,15 @@ fn main() {
 
     fs::write(file_name, text)
         .expect("Error writing to file");
+
+    if Path::new("./.git").exists() {
+        println!("Directory exists");
+    } else {
+        println!("Directory does not exist");
+    }
+
+    /*Command::new("touch")
+        .arg("hi")
+        .spawn()
+        .expect("Could not execute command");*/
 }
