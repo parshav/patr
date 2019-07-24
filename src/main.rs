@@ -11,7 +11,9 @@ fn main() {
     let mut text = String::new();
 
     let time = chrono::prelude::Local::now().format("%Y-%m-%d-%H:%M:%S");
-    let _current_dir = env::current_dir();
+    let current_dir = env::current_dir();
+
+    println!("debug Current directory {}", current_dir.unwrap().to_string_lossy());
 
     println!("Journal Entry");
     println!("Title for today ?");
@@ -39,8 +41,30 @@ fn main() {
         println!("Directory does not exist");
     }
 
-    /*Command::new("touch")
-        .arg("hi")
+    commit_and_push(&title)
+}
+
+fn commit_and_push(msg: &String) {
+    Command::new("git")
+        .arg("add")
+        .arg(".")
         .spawn()
-        .expect("Could not execute command");*/
+        .expect("Error in git add .")
+        .wait();
+
+    Command::new("git")
+        .arg("commit")
+        .arg("-m")
+        .arg(msg)
+        .spawn()
+        .expect("Error in git commit")
+        .wait();
+
+    Command::new("git")
+        .arg("push")
+        .arg("origin")
+        .arg("master")
+        .spawn()
+        .expect("Error in git push")
+        .wait();
 }
