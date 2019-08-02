@@ -13,6 +13,8 @@ fn main() {
     let time = chrono::prelude::Local::now().format("%Y-%m-%d-%H:%M:%S");
     let current_dir = env::current_dir();
 
+    git_exists();
+
     println!("debug Current directory {}", current_dir.unwrap().to_string_lossy());
 
     println!("Journal Entry");
@@ -35,13 +37,19 @@ fn main() {
     fs::write(file_name, text)
         .expect("Error writing to file");
 
-    if Path::new("./.git").exists() {
-        println!("Directory exists");
-    } else {
-        println!("Directory does not exist");
-    }
-
     commit_and_push(&title)
+}
+
+fn git_exists() {
+    if !Path::new("./.git").exists() {
+        println!("Initializing git");
+        Command::new("git")
+            .arg("init")
+            .arg(".")
+            .spawn()
+            .expect("Error in git init")
+            .wait();
+    }
 }
 
 fn commit_and_push(msg: &String) {
