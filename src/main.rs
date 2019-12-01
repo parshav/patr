@@ -3,8 +3,6 @@ extern crate chrono;
 use std::io::stdin;
 use std::env;
 use std::fs;
-use std::process::Command;
-use std::path::Path;
 
 fn main() {
     let mut title = String::new();
@@ -12,8 +10,6 @@ fn main() {
 
     let time = chrono::prelude::Local::now().format("%Y-%m-%d-%H:%M:%S");
     let current_dir = env::current_dir();
-
-    git_exists();
 
     println!("debug Current directory {}", current_dir.unwrap().to_string_lossy());
 
@@ -37,42 +33,10 @@ fn main() {
     fs::write(file_name, text)
         .expect("Error writing to file");
 
-    commit_and_push(&title)
 }
 
-fn git_exists() {
-    if !Path::new("./.git").exists() {
-        println!("Initializing git");
-        Command::new("git")
-            .arg("init")
-            .arg(".")
-            .spawn()
-            .expect("Error in git init")
-            .wait();
-    }
-}
-
-fn commit_and_push(msg: &String) {
-    Command::new("git")
-        .arg("add")
-        .arg(".")
-        .spawn()
-        .expect("Error in git add .")
-        .wait();
-
-    Command::new("git")
-        .arg("commit")
-        .arg("-m")
-        .arg(msg)
-        .spawn()
-        .expect("Error in git commit")
-        .wait();
-
-    Command::new("git")
-        .arg("push")
-        .arg("origin")
-        .arg("master")
-        .spawn()
-        .expect("Error in git push")
-        .wait();
-}
+/*
+TODO
+- Rethink the git commands usage at all.
+- Chain the notes ?
+*/
