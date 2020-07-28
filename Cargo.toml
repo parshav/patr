@@ -1,7 +1,7 @@
 [package]
-name = "rustak"
+name = "patr"
 version = "0.1.0"
-authors = ["Parshav Chauhan <pchauhan@clientresourcesinc.com>"]
+authors = ["Parshav"]
 edition = "2018"
 
 [dependencies]
