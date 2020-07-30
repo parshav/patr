@@ -1,3 +1,4 @@
+use std::str;
 use std::env;
 use std::io::{self, BufRead};
 
@@ -30,6 +31,18 @@ fn main() {
     handle.read_until(b'-', &mut buffer)
     	.expect("Error in read until");
 
+   	let buffer = str::from_utf8(&buffer).expect("error in utf8");
+   	println!("The buffer {}", buffer);
+
+   	/*buffer.iter()
+   	.map(|x| {
+   		str::from_utf8(x).expect("error in map")
+   	})
+   	.for_each(|x| {
+   		println("{}")	
+   	});*/
+
+	//println!("The buffer {:?}", buffer);
 }
 
 // checks for config, if exists, use that delim.
