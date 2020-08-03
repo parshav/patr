@@ -18,6 +18,8 @@ fn main() {
     // start the writing -> use read [option] or rust built in
     // write out to file, file name should be title ?
 
+    clear_screen();
+
 	let title = get_title();
 
     let input = read_input_buffer();
@@ -60,7 +62,9 @@ fn output_to_file(content: Vec<u8>, file_name: String) {
 	buffer.write_all(&content).expect("Error writing to file");
 }
 
-
+fn clear_screen() {
+	print!("\x1B[2J\x1B[1;1H");
+}
 
 /// unused 
 
