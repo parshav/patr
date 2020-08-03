@@ -1,6 +1,8 @@
 use std::str;
 use std::env;
 use std::io::{self, BufRead};
+use std::fs::File;
+use std::io::prelude::*;
 
 // Is there a different way to store config, even from writing down config?
 // Separate out the writing function
@@ -16,8 +18,11 @@ fn main() {
     // start the writing -> use read [option] or rust built in
     // write out to file, file name should be title ?
 
+	let title = get_title();
+
     let input = read_input_buffer();
 
+    output_to_file(input, title);
 }
 
 // Get title from arg else give a default name maybe.
@@ -27,7 +32,10 @@ fn get_title() -> String {
     	.into_iter()
     	.skip(1)
     	.nth(0)
-    	.expect("Error in getting argument");
+    	.unwrap_or_else(|| {
+    		println!("Using default title.");
+    		String::from("default.txt")
+    	});
 
     println!("Title is {}", title);
 
@@ -35,7 +43,7 @@ fn get_title() -> String {
 }
 
 // Reads input buffer till delim '-'
-fn read_input_buffer() -> String {
+fn read_input_buffer() -> Vec<u8> {
 
 	let mut buffer = vec![];
 	let stdin = io::stdin();
@@ -44,10 +52,17 @@ fn read_input_buffer() -> String {
     handle.read_until(b'-', &mut buffer)
     	.expect("Error in read until");
 
-   	let buffer = str::from_utf8(&buffer).expect("error in utf8");
-
-   	return buffer.to_owned();
+   	return buffer;
 }
+
+fn output_to_file(content: Vec<u8>, file_name: String) {
+	let mut buffer = File::create(file_name).expect("Error creating file");
+	buffer.write_all(&content).expect("Error writing to file");
+}
+
+
+
+/// unused 
 
 // checks for config, if exists, use that delim.
 // else create new,
