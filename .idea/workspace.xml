@@ -14,17 +14,12 @@
   </component>
   <component name="CargoProjects">
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
-    <cargoProject FILE="$PROJECT_DIR$/../patr/Cargo.toml" />
+    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4bfaa5f5-34c2-4e11-a1f0-d009481f826b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../patr/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../patr/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../patr/.idea/rustak.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../patr/.idea/rustak.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../patr/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../patr/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../patr/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../patr/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../patr/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../patr/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../patr/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../patr/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../patr/src/title.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +35,12 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="fcujTaOp" />
@@ -60,25 +55,42 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../patr" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Cargo Command.Run patr (1)">
+    <configuration name="Run patr (1)" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="run --package patr --bin patr" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Run patr" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="channel" value="DEFAULT" />
       <option name="command" value="run --package rustak --bin rustak" />
       <option name="allFeatures" value="false" />
       <option name="emulateTerminal" value="false" />
       <option name="backtrace" value="SHORT" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$/../patr" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <envs />
       <method v="2">
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cargo Command.Run patr (1)" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
@@ -109,7 +121,13 @@
       <workItem from="1567016638493" duration="35000" />
       <workItem from="1567017067914" duration="38000" />
       <workItem from="1567017767027" duration="7000" />
-      <workItem from="1595907543941" duration="1677000" />
+      <workItem from="1595907543941" duration="1722000" />
+      <workItem from="1595909283837" duration="74000" />
+      <workItem from="1595947116810" duration="1999000" />
+      <workItem from="1595984764191" duration="1254000" />
+      <workItem from="1595989851965" duration="279000" />
+      <workItem from="1595990138427" duration="45000" />
+      <workItem from="1595991268272" duration="23000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1563323503839</created>
@@ -153,7 +171,21 @@
       <option name="project" value="LOCAL" />
       <updated>1564780956801</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Change to patr">
+      <created>1595909248690</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1595909248690</updated>
+    </task>
+    <task id="LOCAL-00008" summary="toml update">
+      <created>1595909346591</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1595909346591</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +194,21 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="2">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="3">
+          <value>
+            <State />
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
@@ -195,7 +242,9 @@
     <MESSAGE value="Check if .git folder exists added." />
     <MESSAGE value="Git commands working" />
     <MESSAGE value="Cleaned up git exists." />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up git exists." />
+    <MESSAGE value="Change to patr" />
+    <MESSAGE value="toml update" />
+    <option name="LAST_COMMIT_MESSAGE" value="toml update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595909229205">
@@ -210,33 +259,45 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="693" y="303" width="524" height="508" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1595908959246" />
+    <state x="100" y="96" width="1720" height="884" key="DiffContextDialog" timestamp="1595947567047">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="100" y="96" width="1720" height="884" key="DiffContextDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1595947567047" />
     <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1595908355644">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1595908355644" />
-    <state width="1878" height="286" key="GridCell.Tab.0.bottom" timestamp="1595909219301">
+    <state width="1878" height="286" key="GridCell.Tab.0.bottom" timestamp="1595972794453">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1878" height="286" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1595909219301" />
-    <state width="1878" height="286" key="GridCell.Tab.0.center" timestamp="1595909219300">
+    <state width="1878" height="286" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1595972794453" />
+    <state width="1878" height="286" key="GridCell.Tab.0.center" timestamp="1595972794450">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1878" height="286" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1595909219300" />
-    <state width="1878" height="286" key="GridCell.Tab.0.left" timestamp="1595909219300">
+    <state width="1878" height="286" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1595972794450" />
+    <state width="1878" height="286" key="GridCell.Tab.0.left" timestamp="1595972794449">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1878" height="286" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1595909219300" />
-    <state width="1878" height="286" key="GridCell.Tab.0.right" timestamp="1595909219301">
+    <state width="1878" height="286" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1595972794449" />
+    <state width="1878" height="286" key="GridCell.Tab.0.right" timestamp="1595972794452">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1878" height="286" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1595909219301" />
+    <state width="1878" height="286" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1595972794452" />
     <state x="464" y="188" width="992" height="737" key="SettingsEditor" timestamp="1595908334424">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="464" y="188" width="992" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1595908334424" />
+    <state x="555" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1595909348953">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="555" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1595909348953" />
     <state x="761" y="454" width="387" height="205" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1595908296867">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="761" y="454" width="387" height="205" key="git4idea.remote.GitConfigureRemotesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1595908296867" />
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1595985567869">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1595985567869" />
   </component>
 </project>
