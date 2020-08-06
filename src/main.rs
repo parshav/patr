@@ -4,10 +4,14 @@ use std::io::{self, BufRead};
 use std::fs::File;
 use std::io::prelude::*;
 
+use serde_json::{Result, Value};
+use serde_derive::{Serialize, Deserialize};
+
 // Is there a different way to store config, even from writing down config?
 // Separate out the writing function
 
 fn main() {
+
     let current_directory = env::current_dir()
         .expect("Error in current directory")
         .to_str()
@@ -70,16 +74,25 @@ fn clear_screen() {
 
 // checks for config, if exists, use that delim.
 // else create new,
-fn config_check_for_delim() -> Config {
+fn load_config() -> Config {
     Config {
         name: String::from("Notebook"),
         delim: 'a',
     }
 }
 
+#[derive(Serialize, Deserialize)]
 struct Config {
     name: String,
     delim: char,
+}
+
+impl Config {
+
+	fn store_config(&self) {
+		let json = serde_json::to_string(&self).expect("Error converting struct to json");
+		println!("store json : {}", json);
+	}
 }
 /*
 TODO
